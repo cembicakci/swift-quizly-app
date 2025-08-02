@@ -11,6 +11,8 @@
 		E51CFB482E3E9D0000F54CBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CFB472E3E9D0000F54CBB /* ContentView.swift */; };
 		E51CFB4A2E3E9D0300F54CBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E51CFB492E3E9D0300F54CBB /* Assets.xcassets */; };
 		E51CFB4D2E3E9D0300F54CBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E51CFB4C2E3E9D0300F54CBB /* Preview Assets.xcassets */; };
+		E51CFB552E3E9E2B00F54CBB /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CFB542E3E9E2B00F54CBB /* PrimaryButton.swift */; };
+		E51CFB582E3EA00200F54CBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CFB572E3EA00200F54CBB /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E51CFB472E3E9D0000F54CBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E51CFB492E3E9D0300F54CBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E51CFB4C2E3E9D0300F54CBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E51CFB542E3E9E2B00F54CBB /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		E51CFB572E3EA00200F54CBB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +56,11 @@
 			isa = PBXGroup;
 			children = (
 				E51CFB452E3E9D0000F54CBB /* QuizlyApp.swift */,
-				E51CFB472E3E9D0000F54CBB /* ContentView.swift */,
+				E51CFB562E3E9EC100F54CBB /* Views */,
+				E51CFB532E3E9E1D00F54CBB /* Components */,
 				E51CFB492E3E9D0300F54CBB /* Assets.xcassets */,
 				E51CFB4B2E3E9D0300F54CBB /* Preview Content */,
+				E51CFB572E3EA00200F54CBB /* Extensions.swift */,
 			);
 			path = Quizly;
 			sourceTree = "<group>";
@@ -65,6 +71,22 @@
 				E51CFB4C2E3E9D0300F54CBB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E51CFB532E3E9E1D00F54CBB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFB542E3E9E2B00F54CBB /* PrimaryButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E51CFB562E3E9EC100F54CBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFB472E3E9D0000F54CBB /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51CFB552E3E9E2B00F54CBB /* PrimaryButton.swift in Sources */,
 				E51CFB482E3E9D0000F54CBB /* ContentView.swift in Sources */,
 				E51CFB462E3E9D0000F54CBB /* QuizlyApp.swift in Sources */,
+				E51CFB582E3EA00200F54CBB /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
