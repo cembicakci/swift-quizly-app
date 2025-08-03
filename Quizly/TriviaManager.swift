@@ -11,13 +11,19 @@ import SwiftUI
 class TriviaManager: ObservableObject {
     private(set) var trivia: [Trivia.Result] = []
     @Published private(set) var length = 0
+    
+    // Variables to set question and answers
     @Published private(set) var index = 0
-    @Published private(set) var reachedEnd = false
-    @Published private(set) var answerSelected = false
     @Published private(set) var question: AttributedString = ""
     @Published private(set) var answerChoices: [Answer] = []
+    
+    // Variables for score and progress
     @Published private(set) var progress: CGFloat = 0.00
     @Published private(set) var score = 0
+    
+    // Variables to know if an answer has been selected and reached the end of trivia
+    @Published private(set) var reachedEnd = false
+    @Published private(set) var answerSelected = false
     
     init() {
         Task.init {
@@ -25,6 +31,7 @@ class TriviaManager: ObservableObject {
         }
     }
     
+    // Asynchronous HTTP request to get the trivia questions and answers
     func fetchTrivia() async {
         guard let url = URL(string: "https://opentdb.com/api.php?amount=10") else { fatalError("Missing URL") }
         
@@ -32,14 +39,13 @@ class TriviaManager: ObservableObject {
         
         do {
             let(data, response) = try await URLSession.shared.data(for: urlRequest)
-            
             guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
             
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
+
             let decodedData = try decoder.decode(Trivia.self, from: data)
-            
+
             DispatchQueue.main.async {
                 self.trivia = decodedData.results
                 self.length = self.trivia.count
