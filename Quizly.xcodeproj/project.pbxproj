@@ -15,6 +15,8 @@
 		E51CFB582E3EA00200F54CBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CFB572E3EA00200F54CBB /* Extensions.swift */; };
 		E51CFB5A2E3F7E4300F54CBB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CFB592E3F7E4300F54CBB /* QuestionView.swift */; };
 		E51CFB5C2E3F7F2B00F54CBB /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CFB5B2E3F7F2B00F54CBB /* ProgressBar.swift */; };
+		E51CFB5F2E3F810200F54CBB /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CFB5E2E3F810200F54CBB /* Answer.swift */; };
+		E51CFB612E3F817800F54CBB /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CFB602E3F817800F54CBB /* AnswerRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		E51CFB572E3EA00200F54CBB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E51CFB592E3F7E4300F54CBB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		E51CFB5B2E3F7F2B00F54CBB /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		E51CFB5E2E3F810200F54CBB /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		E51CFB602E3F817800F54CBB /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 				E51CFB452E3E9D0000F54CBB /* QuizlyApp.swift */,
 				E51CFB562E3E9EC100F54CBB /* Views */,
 				E51CFB532E3E9E1D00F54CBB /* Components */,
+				E51CFB5D2E3F80F200F54CBB /* Models */,
 				E51CFB492E3E9D0300F54CBB /* Assets.xcassets */,
 				E51CFB4B2E3E9D0300F54CBB /* Preview Content */,
 				E51CFB572E3EA00200F54CBB /* Extensions.swift */,
@@ -82,6 +87,7 @@
 			children = (
 				E51CFB542E3E9E2B00F54CBB /* PrimaryButton.swift */,
 				E51CFB5B2E3F7F2B00F54CBB /* ProgressBar.swift */,
+				E51CFB602E3F817800F54CBB /* AnswerRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -93,6 +99,14 @@
 				E51CFB592E3F7E4300F54CBB /* QuestionView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E51CFB5D2E3F80F200F54CBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFB5E2E3F810200F54CBB /* Answer.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +181,9 @@
 			files = (
 				E51CFB5A2E3F7E4300F54CBB /* QuestionView.swift in Sources */,
 				E51CFB552E3E9E2B00F54CBB /* PrimaryButton.swift in Sources */,
+				E51CFB612E3F817800F54CBB /* AnswerRow.swift in Sources */,
 				E51CFB482E3E9D0000F54CBB /* ContentView.swift in Sources */,
+				E51CFB5F2E3F810200F54CBB /* Answer.swift in Sources */,
 				E51CFB462E3E9D0000F54CBB /* QuizlyApp.swift in Sources */,
 				E51CFB5C2E3F7F2B00F54CBB /* ProgressBar.swift in Sources */,
 				E51CFB582E3EA00200F54CBB /* Extensions.swift in Sources */,
