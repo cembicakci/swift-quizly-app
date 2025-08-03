@@ -47,9 +47,16 @@ class TriviaManager: ObservableObject {
             let decodedData = try decoder.decode(Trivia.self, from: data)
 
             DispatchQueue.main.async {
-                self.trivia = decodedData.results
-                self.length = self.trivia.count
-                self.setQuestion()
+                // Reset variables before assigning new values, for when the user plays the game another time
+               self.index = 0
+               self.score = 0
+               self.progress = 0.00
+               self.reachedEnd = false
+
+               // Set new values for all variables
+               self.trivia = decodedData.results
+               self.length = self.trivia.count
+               self.setQuestion()
             }
         } catch {
             print("Error fetching trivia: \(error)")
