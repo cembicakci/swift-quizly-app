@@ -37,6 +37,7 @@ struct QuestionView: View {
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(red: 0.9843, green: 0.9294, blue: 0.84705))
+        .navigationBarBackButtonHidden()
     }
 }
 
