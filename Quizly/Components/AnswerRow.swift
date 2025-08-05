@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AnswerRow: View {
-    @EnvironmentObject var triviaManager: TriviaManager
+    @EnvironmentObject var triviaManager: TriviaViewModel
 
     var answer: Answer
     @State private var isSelected = false
@@ -40,7 +40,7 @@ struct AnswerRow: View {
         .onTapGesture {
             if !triviaManager.answerSelected {
                 isSelected = true
-                triviaManager.selectAnswer(answer: answer)
+                triviaManager.selectAnswer(answer)
             }
         }
     }
@@ -48,5 +48,5 @@ struct AnswerRow: View {
 
 #Preview {
     AnswerRow(answer: Answer(text: "Single", isCorrect: true))
-        .environmentObject(TriviaManager())
+        .environmentObject(TriviaViewModel())
 }

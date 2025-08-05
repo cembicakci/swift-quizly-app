@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TriviaView: View {
-    @EnvironmentObject var triviaManager: TriviaManager
+    @EnvironmentObject var triviaManager: TriviaViewModel
 
     var body: some View {
         if triviaManager.reachedEnd {
@@ -21,7 +21,7 @@ struct TriviaView: View {
                 
                 Button {
                     Task.init {
-                        await triviaManager.fetchTrivia()
+                        await triviaManager.loadTrivia()
                     }
                 } label: {
                     PrimaryButton(text: "Play Again")
@@ -41,5 +41,5 @@ struct TriviaView: View {
 
 #Preview {
     TriviaView()
-        .environmentObject(TriviaManager())
+        .environmentObject(TriviaViewModel())
 }

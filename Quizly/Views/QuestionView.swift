@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuestionView: View {
-    @EnvironmentObject var triviaManager: TriviaManager
+    @EnvironmentObject var triviaManager: TriviaViewModel
     
     var body: some View {
         VStack (spacing: 40) {
@@ -55,5 +55,5 @@ struct QuestionView: View {
 
 #Preview {
     QuestionView()
-        .environmentObject(TriviaManager())
+        .environmentObject(TriviaViewModel())
 }
